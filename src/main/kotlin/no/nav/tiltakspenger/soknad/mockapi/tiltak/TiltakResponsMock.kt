@@ -1,6 +1,7 @@
 package no.nav.tiltakspenger.soknad.mockapi.tiltak
 
 import no.nav.tiltakspenger.libs.tiltak.TiltakResponsDTO
+import java.time.LocalDate
 import java.time.LocalDateTime
 
 fun mockTiltakRespons(): List<TiltakResponsDTO.TiltakDTO> = listOf(
@@ -8,12 +9,12 @@ fun mockTiltakRespons(): List<TiltakResponsDTO.TiltakDTO> = listOf(
         id = "test-id",
         gjennomforing = TiltakResponsDTO.GjennomføringDTO(
             id = "test",
-            arrangørnavn = "test",
-            typeNavn = "test",
-            arenaKode = TiltakResponsDTO.TiltakType.TESTING,
+            arrangørnavn = "Testarrangør AS",
+            typeNavn = TiltakResponsDTO.TiltakType.KURS.navn,
+            arenaKode = TiltakResponsDTO.TiltakType.KURS,
         ),
-        deltakelseFom = null,
-        deltakelseTom = null,
+        deltakelseFom = LocalDate.now().withDayOfMonth(1),
+        deltakelseTom = LocalDate.now().withDayOfMonth(20),
         deltakelseStatus = TiltakResponsDTO.DeltakerStatusDTO.DELTAR,
         deltakelseDagerUke = null,
         deltakelseProsent = null,

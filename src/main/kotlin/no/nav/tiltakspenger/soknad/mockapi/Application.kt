@@ -33,7 +33,7 @@ fun Application.mockApi() {
             call.respond(tiltakMock)
         }
         post("/personalia") {
-            val personaliaMock = mockSøkerRespons().toPerson()
+            val personaliaMock = mockSøkerRespons()
             call.respond(personaliaMock)
         }
         post("/rest/journalpostapi/v1/journalpost") {

@@ -29,7 +29,7 @@ fun mockSøkerRespons(): SøkerRespons = SøkerRespons(
             forelderBarnRelasjon = emptyList(),
             foedsel = listOf(
                 Fødsel(
-                    foedselsdato = LocalDate.now(),
+                    foedselsdato = LocalDate.now().minusYears(19),
                     folkeregistermetadata = FolkeregisterMetadata(
                         aarsak = null,
                         ajourholdstidspunkt = null,
