@@ -3,6 +3,7 @@ package no.nav.tiltakspenger.soknad.mockapi
 import com.fasterxml.jackson.databind.SerializationFeature
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule
 import com.fasterxml.jackson.module.kotlin.KotlinModule
+import io.ktor.http.HttpStatusCode
 import io.ktor.serialization.jackson.jackson
 import io.ktor.server.application.Application
 import io.ktor.server.application.call
@@ -13,6 +14,8 @@ import io.ktor.server.routing.get
 import io.ktor.server.routing.post
 import io.ktor.server.routing.routing
 import mu.KotlinLogging
+import no.nav.tiltakspenger.soknad.mockapi.av.mockAVResultat
+import no.nav.tiltakspenger.soknad.mockapi.joark.mockJoarkRespons
 import no.nav.tiltakspenger.soknad.mockapi.personalia.mockSøkerRespons
 import no.nav.tiltakspenger.soknad.mockapi.tiltak.mockTiltakRespons
 
@@ -37,7 +40,16 @@ fun Application.mockApi() {
             call.respond(personaliaMock)
         }
         post("/rest/journalpostapi/v1/journalpost") {
-            call.respond(123456)
+            call.respond(status = HttpStatusCode.Created, message = mockJoarkRespons())
+        }
+        post("/av") {
+            call.respond(mockAVResultat())
+        }
+        get("/unleash") {
+            call.respond(status = HttpStatusCode.OK, message = "OK")
+        }
+        post("/unleash") {
+            call.respond(status = HttpStatusCode.OK, message = "OK")
         }
     }
 }
