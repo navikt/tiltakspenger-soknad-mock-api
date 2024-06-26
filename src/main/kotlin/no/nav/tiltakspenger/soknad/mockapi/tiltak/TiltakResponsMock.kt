@@ -19,5 +19,5 @@ fun mockTiltakRespons(): List<TiltakResponsDTO.TiltakDTO> = listOf(
         deltakelseProsent = null,
         kilde = "test",
         registrertDato = LocalDateTime.now(),
-    )
+    ),
 )

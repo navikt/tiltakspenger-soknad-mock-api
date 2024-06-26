@@ -22,8 +22,8 @@ fun mockSøkerRespons(): SøkerRespons = SøkerRespons(
                     metadata = EndringsMetadata(
                         master = "test",
                         endringer = emptyList(),
-                    )
-                )
+                    ),
+                ),
 
             ),
             forelderBarnRelasjon = emptyList(),
@@ -36,20 +36,20 @@ fun mockSøkerRespons(): SøkerRespons = SøkerRespons(
                         gyldighetstidspunkt = null,
                         kilde = null,
                         opphoerstidspunkt = null,
-                        sekvens = null
+                        sekvens = null,
                     ),
-                    metadata = EndringsMetadata(endringer = listOf(), master = "")
+                    metadata = EndringsMetadata(endringer = listOf(), master = ""),
 
-                )
+                ),
             ),
             adressebeskyttelse = listOf(
                 Adressebeskyttelse(
                     gradering = AdressebeskyttelseGradering.UGRADERT,
                     folkeregistermetadata = null,
-                    metadata = EndringsMetadata(endringer = listOf(), master = "test")
-                )
+                    metadata = EndringsMetadata(endringer = listOf(), master = "test"),
+                ),
             ),
             doedsfall = emptyList(),
-        )
-    )
+        ),
+    ),
 )

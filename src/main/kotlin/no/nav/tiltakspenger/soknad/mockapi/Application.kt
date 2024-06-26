@@ -42,7 +42,6 @@ fun Application.mockApi() {
     }
 }
 
-
 internal fun Application.installJacksonFeature() {
     install(ContentNegotiation) {
         jackson {
