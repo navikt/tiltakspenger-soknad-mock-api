@@ -45,10 +45,10 @@ fun Application.mockApi() {
         post("/av") {
             call.respond(mockAVResultat())
         }
-        get("/unleash") {
+        get("/unleash/api/client/features") {
             call.respond(status = HttpStatusCode.OK, message = "OK")
         }
-        post("/unleash") {
+        post("/unleash/api/client/metrics") {
             call.respond(status = HttpStatusCode.OK, message = "OK")
         }
     }
