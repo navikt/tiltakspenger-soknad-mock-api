@@ -4,6 +4,7 @@ val ktorVersion = "2.3.12"
 val logbackVersion = "1.5.6"
 val logbackEncoderVersion = "7.4"
 val jacksonVersion = "2.17.1"
+val felleslibVersion = "0.0.207"
 
 plugins {
     application
@@ -20,7 +21,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.github.navikt.tiltakspenger-libs:tiltak-dtos:0.0.108")
+    implementation("com.github.navikt.tiltakspenger-libs:tiltak-dtos:$felleslibVersion")
 
     // logging
     implementation("ch.qos.logback:logback-classic:$logbackVersion")
