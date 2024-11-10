@@ -4,7 +4,7 @@ val ktorVersion = "2.3.12"
 val logbackVersion = "1.5.6"
 val logbackEncoderVersion = "7.4"
 val jacksonVersion = "2.17.1"
-val felleslibVersion = "0.0.207"
+val felleslibVersion = "0.0.268"
 
 plugins {
     application
