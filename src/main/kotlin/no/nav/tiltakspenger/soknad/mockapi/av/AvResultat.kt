@@ -8,7 +8,9 @@ data class AvSjekkResultat(
 )
 
 enum class Status {
-    FOUND, OK, ERROR
+    FOUND,
+    OK,
+    ERROR,
 }
 
 fun mockAVResultat(): List<AvSjekkResultat> = listOf(
